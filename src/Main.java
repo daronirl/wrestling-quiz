@@ -32,17 +32,16 @@ public class Main {
                 System.out.println(wrestlingQuestions.get(i));
 
                 String userAnswer = scanner.nextLine();
-                if (userAnswer.equals(wrestlingAnswers.get(i))) {
+
+                if (userAnswer.equalsIgnoreCase(wrestlingAnswers.get(i))) {
                         score++;
                     System.out.println("Your answer was " + userAnswer + ", That is correct!!!");
                 } else {
                     System.out.println("Your answer was wrong");
                 }
             }
-        } else {
-            System.out.println("Thanks for playing!");
         }
-
+        System.out.println("Thanks for playing! " + "Your " + score);
 
     }
 
