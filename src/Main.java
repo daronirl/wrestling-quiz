@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        // Input to ask you your name and if you want to take the quiz
         Scanner scanner = new Scanner(System.in);
         System.out.println("what is your name?");
         String name = scanner.nextLine();
@@ -17,16 +17,18 @@ public class Main {
         wrestlingQuestions.add("Who is the longest reigning Intercontinental Champion?");
         wrestlingQuestions.add("Tony Khan is the owner of which wrestling company?");
         wrestlingQuestions.add("Who is the AEW World Champion?");
-
+        // Wrestling Answers
         ArrayList<String> wrestlingAnswers = new ArrayList<>();
         wrestlingAnswers.add("Roman Reigns");
         wrestlingAnswers.add("Gunther");
         wrestlingAnswers.add("AEW");
         wrestlingAnswers.add("MJF");
-
+        // Score variable to increase for every right answer
         int score = 0;
 
-        if (answer.equals("yes")) {
+
+
+        if (answer.equals("yes") && score == 0){
             System.out.println("Great! Lets get started!");
             for (int i = 0; i < wrestlingQuestions.size(); i++) {
                 System.out.println(wrestlingQuestions.get(i));
@@ -40,8 +42,22 @@ public class Main {
                     System.out.println("Your answer was wrong");
                 }
             }
+            System.out.println("Ouch, you got all questions wrong! that means you got a big fat F!");
+
+        } else {
+            System.out.println("Guess you don't want to play, bye!");
         }
-        System.out.println("Thanks for playing! " + "Your " + score);
+
+        if (score >= 4) {
+            System.out.println("Thanks for playing! " + "Your score is " + score + " Your grade is an A!");
+        } else if (score == 3) {
+            System.out.println("Thanks for playing! " + "Your score is " + score + " Your grade is a B!");
+        } else if (score == 2) {
+            System.out.println("Thanks for playing! " + "Your score is " + score + " Your grade is a C!");
+        } else if (score == 1) {
+            System.out.println("Thanks for playing! " + "Your score is " + score + " Your grade is a D!");
+        }
+
 
     }
 
