@@ -28,7 +28,7 @@ public class Main {
 
 
 
-        if (answer.equals("yes") && score == 0){
+        if (answer.equals("yes")){
             System.out.println("Great! Lets get started!");
             for (int i = 0; i < wrestlingQuestions.size(); i++) {
                 System.out.println(wrestlingQuestions.get(i));
@@ -42,13 +42,13 @@ public class Main {
                     System.out.println("Your answer was wrong");
                 }
             }
-            System.out.println("Ouch, you got all questions wrong! that means you got a big fat F!");
+
 
         } else {
             System.out.println("Guess you don't want to play, bye!");
         }
 
-        if (score >= 4) {
+        if (score == 4) {
             System.out.println("Thanks for playing! " + "Your score is " + score + " Your grade is an A!");
         } else if (score == 3) {
             System.out.println("Thanks for playing! " + "Your score is " + score + " Your grade is a B!");
@@ -56,11 +56,10 @@ public class Main {
             System.out.println("Thanks for playing! " + "Your score is " + score + " Your grade is a C!");
         } else if (score == 1) {
             System.out.println("Thanks for playing! " + "Your score is " + score + " Your grade is a D!");
+        } else if (score == 0) {
+            System.out.println("Ouch, you got all questions wrong! that means you got a big fat F!");
         }
 
-
     }
-
-
 
 }
